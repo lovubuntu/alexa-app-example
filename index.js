@@ -30,16 +30,15 @@ alexaApp.launch(function(request, response) {
   response.say("You launched the app!");
 });
 
-alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
+// alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
 
-alexaApp.intent("nameIntent", {
-    "slots": { "NAME": "LITERAL" },
+alexaApp.intent("STUMPED_start", {
     "utterances": [
-      "my {name is|name's} {names|NAME}", "set my name to {names|NAME}"
+      "Let's play stumped."
     ]
   },
   function(request, response) {
-    response.say("Success!");
+    response.say("Game on! Khuska");
   }
 );
 
