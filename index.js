@@ -7,6 +7,8 @@ var app = express();
 // ALWAYS setup the alexa app and attach it to express before anything else.
 var alexaApp = new alexa.app("stumped");
 
+console.log('Launching App!')
+
 alexaApp.express({
   expressApp: app,
   //router: express.Router(),
@@ -38,6 +40,7 @@ alexaApp.intent("STUMPED_start", {
     ]
   },
   function(request, response) {
+    console.log('MESSAGE RECEIVED!')
     response.say("Game on! Khuska");
   }
 );
