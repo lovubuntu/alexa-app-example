@@ -5,7 +5,7 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 // ALWAYS setup the alexa app and attach it to express before anything else.
-var alexaApp = new alexa.app("test");
+var alexaApp = new alexa.app("stumped");
 
 alexaApp.express({
   expressApp: app,
@@ -34,7 +34,7 @@ alexaApp.launch(function(request, response) {
 
 alexaApp.intent("STUMPED_start", {
     "utterances": [
-      "Let's play stumped."
+      "start game", "let's play", "Let's play stumped."
     ]
   },
   function(request, response) {
